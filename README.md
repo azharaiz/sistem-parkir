@@ -1,5 +1,4 @@
 # Sistem Parkir
----
 ## Modules
 1. Fingerprint
 2. Kamera
