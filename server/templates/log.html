@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Anelyza Log</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1>Log File</h1>
+    <table style="width:100%">
+        <tr>
+          <th>Index</th>
+          <th>Tanggal</th>
+          <th>Username</th>
+          <th>Photo</th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log[0] }}</td>
+            <td>{{ log[1] }}</td>
+            <td>{{ log[2] }}</td>
+            <td><img src="../static/img/{{ log[3] }}"></td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% endblock %}
+  </body>
+</html>
