@@ -7,8 +7,7 @@
   <body>
     {% extends "template.html" %}
     {% block content %}
-    <h1>Log File</h1>
-    <table style="width:100%">
+    <table>
         <tr>
           <th>Index</th>
           <th>Tanggal</th>
@@ -20,7 +19,7 @@
             <td>{{ log[0] }}</td>
             <td>{{ log[1] }}</td>
             <td>{{ log[2] }}</td>
-            <td><img src="../static/img/{{ log[3] }}"></td>
+            <td><img src="../static/data/img/{{ log[3] }}"></td>
         </tr>
         {% endfor %}
       </table>

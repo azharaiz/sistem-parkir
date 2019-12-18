@@ -4,7 +4,7 @@ def get_img():
     return os.path.join(os.path.abspath(os.getcwd()),"data","img")
 
 def get_log():
-    return os.path.join(os.path.abspath(os.getcwd()),"data","log.txt")
+    return os.path.join(os.path.abspath(os.getcwd()),"server","static","data","log.txt")
 
 def get_file():
     log_file = open(get_log(), 'r')
