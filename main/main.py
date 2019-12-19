@@ -26,14 +26,14 @@ def readFP():
             print('No match found!')
             return ""
         else:
-            dataFP = open("/home/pi/dataFP.txt", 'r').read().split(",")
+            dataFP = open(os.path.join(os.path.abspath(os.getcwd()), "server", "static", "data", "dataFP.txt"), 'r').read().split(",")
             for usr in dataFP:
                 print(usr)
                 id_usr = usr.split('-')[0]
                 name = usr.split('-')[1]
                 if int(id_usr) == positionNumber:
                     break
-            log = open("/home/pi/log.txt", "a+")
+            log = open(os.path.join(os.path.abspath(os.getcwd()), "server", "static", "data", "log.txt"), "a+")
             date = datetime.now().strftime("%d %b %Y %H:%M:%S")
             image_name = datetime.now().strftime("%d%b%Y%H:%M:%S") + "_" + name
             log.write(date + ", " + name + ", " + image_name + "\n")
